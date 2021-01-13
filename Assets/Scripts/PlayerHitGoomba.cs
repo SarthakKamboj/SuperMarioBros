@@ -18,7 +18,8 @@ public class PlayerHitGoomba : MonoBehaviour
         if (col.collider.tag == "Player") {
 
             Vector3 colPoint = col.contacts[0].point;
-            if (goombaExtents.y >= Mathf.Abs(goombaCenter.y - colPoint.y)) {
+            float yOffset = colPoint.y - goombaCenter.y;
+            if (yOffset <= goombaExtents.y && yOffset >= 0) {
                 if (goombaExtents.z >= Mathf.Abs(goombaCenter.z - colPoint.z)) {
                     if (goombaExtents.x >= Mathf.Abs(goombaCenter.x - colPoint.x)) {
                         col.collider.gameObject.GetComponent<Rigidbody>().AddForce(hitForce,ForceMode.VelocityChange);
@@ -27,6 +28,8 @@ public class PlayerHitGoomba : MonoBehaviour
                         Destroy(gameObject, 5f);
                     }
                 }
+            } else {
+                col.collider.GetComponent<PlayerDie>().Die();
             }
         }
     }

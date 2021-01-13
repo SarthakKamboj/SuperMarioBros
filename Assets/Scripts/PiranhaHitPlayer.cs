@@ -26,11 +26,9 @@ public class PiranhaHitPlayer : MonoBehaviour
     }
     */
 
-    public AudioSource hitPlayerAs;
     void OnCollisionEnter(Collision col) {
         if (col.collider.tag == "Player") {
-            hitPlayerAs.Play();
-            Debug.Log("lose life");
+            col.gameObject.GetComponent<PlayerDie>().Die();
         }
     }
 }
