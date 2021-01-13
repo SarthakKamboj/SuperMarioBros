@@ -7,6 +7,7 @@ public class PlayerHitGoomba : MonoBehaviour
     Bounds goombaBounds;
     Vector3 goombaCenter, goombaExtents;
     public Vector3 hitForce = new Vector3(0f,10f,0f);
+    public Vector3 dieForce = new Vector3(0, 10f, 0f);
     void Start() {
         goombaBounds = GetComponent<Collider>().bounds;
         goombaCenter = goombaBounds.center;
@@ -21,7 +22,9 @@ public class PlayerHitGoomba : MonoBehaviour
                 if (goombaExtents.z >= Mathf.Abs(goombaCenter.z - colPoint.z)) {
                     if (goombaExtents.x >= Mathf.Abs(goombaCenter.x - colPoint.x)) {
                         col.collider.gameObject.GetComponent<Rigidbody>().AddForce(hitForce,ForceMode.VelocityChange);
-                        Destroy(gameObject);
+                        GetComponent<Collider>().isTrigger = true;
+                        GetComponent<Rigidbody>().AddForce(dieForce, ForceMode.VelocityChange);
+                        Destroy(gameObject, 5f);
                     }
                 }
             }

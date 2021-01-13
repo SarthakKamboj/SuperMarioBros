@@ -14,7 +14,6 @@ public class BlockHitByPlayer : MonoBehaviour
         boundsExtent = brickBounds.extents;
     }
     void OnCollisionEnter(Collision collision) {
-        Debug.Log("collision");
         if (collision.gameObject.tag == "Player") {
             Vector3 colPoint = collision.contacts[0].point;
             if (ColPointOnBottom(colPoint)) {

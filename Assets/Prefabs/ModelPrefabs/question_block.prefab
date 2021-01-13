@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 919132149621270835}
   - component: {fileID: 919132149621270834}
   - component: {fileID: 2134695015}
+  - component: {fileID: 2134695016}
   m_Layer: 0
   m_Name: question_block
   m_TagString: Untagged
@@ -128,3 +129,20 @@ MonoBehaviour:
     componentToCall: {fileID: 0}
   - prefab: {fileID: 0}
     componentToCall: {fileID: 0}
+--- !u!114 &2134695016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5748186469899739288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e210906bc1f61cb45b5c9ea344aaa72d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionBlockHitMesh: {fileID: -5495902117074765545, guid: dca9ff61b97d42f458d5b766746ec225,
+    type: 3}
+  questionBlockHitMaterial: {fileID: 2100000, guid: 70468b9eb4816364da63180e76fa9b8c,
+    type: 2}
+  compsToKeep: []
