@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CoinThroughBrick : MonoBehaviour
 {
-    // bool dieImmediately = false;
     public float timeToDieAfter = 0.4f;
     public float speedMultipler = 0.5f;
     GameObject audioManager;

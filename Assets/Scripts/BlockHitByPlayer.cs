@@ -33,7 +33,7 @@ public class BlockHitByPlayer : MonoBehaviour
         int index = Random.Range(0, objects.Length);
         InstantiableObject obj = objects[index];
         GameObject newObject = Instantiate(obj.prefab, boundCenter + new Vector3(0f,y,0f), Quaternion.Euler(Vector3.up));
-        Behaviour comp = (Behaviour) newObject.GetComponent(obj.componentToCall.GetType());
+        Behaviour comp = (Behaviour) newObject.GetComponent(obj.componentToCall);
         comp.enabled = true;
     }
     bool ColPointOnBottom(Vector3 colPoint) {
@@ -64,5 +64,6 @@ public class BlockHitByPlayer : MonoBehaviour
 [System.Serializable]
 class InstantiableObject {
     public GameObject prefab;
-    public Component componentToCall;
+    // public Component componentToCall;
+    public string componentToCall;
 }

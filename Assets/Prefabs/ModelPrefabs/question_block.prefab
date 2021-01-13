@@ -125,10 +125,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - prefab: {fileID: 0}
-    componentToCall: {fileID: 0}
-  - prefab: {fileID: 0}
-    componentToCall: {fileID: 0}
+  - prefab: {fileID: 8888897695359107323, guid: 3127ef7d94ebb6f4da6ec722cac15f7e,
+      type: 3}
+    componentToCall: RockInstatiateFromBlock
+  - prefab: {fileID: 8280804581089278201, guid: ebe155b1c23685543a8ef9afdbd05654,
+      type: 3}
+    componentToCall: RockInstatiateFromBlock
   numObjectsInstantiated: 0
 --- !u!114 &2134695016
 MonoBehaviour:
