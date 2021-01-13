@@ -5,18 +5,19 @@ using UnityEngine;
 public class CoinThroughBrick : MonoBehaviour
 {
     // bool dieImmediately = false;
-    public float timeToDieAfter = 2f;
-    public float speedMultipler = 3f;
+    public float timeToDieAfter = 0.4f;
+    public float speedMultipler = 0.5f;
+    GameObject audioManager;
 
-    public void Start() {
-        AudioSource aS = gameObject.GetComponent<AudioSource>();
-        aS.Play();
-        Destroy(gameObject, aS.clip.length);
+    void Start() {
+        audioManager = GameObject.Find("AudioManager");
+        audioManager.GetComponent<SoundHandler>().Play("Coin");
+        Destroy(gameObject, timeToDieAfter);
     }
 
-    public void Update() {
+    void Update() {
         Vector3 pos = transform.position;
-        pos.y += Time.deltaTime*speedMultipler;
+        pos.y += speedMultipler;
         transform.position = pos;
     }
     

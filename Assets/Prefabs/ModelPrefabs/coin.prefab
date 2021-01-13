@@ -126,7 +126,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 122e2b724d9afa742928083a06eab75b, type: 2}
+  - {fileID: 2100000, guid: 84f932d7e811df543bb202d465aa9ab3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -201,7 +201,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd7e3cf484e8bea448ee37a0d1e97cb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinAudioSource: {fileID: 0}
 --- !u!114 &447940520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,8 +213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0acae3b10fd7ed488345c4e779e9126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDieAfter: 0.25
-  speedMultipler: 1
+  timeToDieAfter: 0.2
+  speedMultipler: 0.5
 --- !u!82 &447940521
 AudioSource:
   m_ObjectHideFlags: 0
