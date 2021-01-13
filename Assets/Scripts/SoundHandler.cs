@@ -21,7 +21,6 @@ public class SoundHandler : MonoBehaviour
         if (sound == null) {
             return;
         }
-        Debug.Log(sound);
         int i = 0;
         while (i < sound.sources.Count) {
             AudioSource aS = sound.sources[i];
