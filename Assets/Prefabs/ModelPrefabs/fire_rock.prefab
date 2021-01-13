@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9091142799026144683}
   - component: {fileID: 9091142799026144682}
   - component: {fileID: 919132147843409110}
+  - component: {fileID: 1586150023317862639}
   m_Layer: 0
   m_Name: fire_rock
   m_TagString: Untagged
@@ -125,3 +126,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mode: Fire
+--- !u!114 &1586150023317862639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8280804581089278201}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c98a1c7560f718f4b91b63c45a935a67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceMultiplier: 10

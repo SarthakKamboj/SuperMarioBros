@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     void Move() {
         if (rb.velocity.magnitude > maxSpeed) {
             rb.velocity = rb.velocity.normalized * maxSpeed;
+            return;
         }
 
         float horizontal = Input.GetAxis("Horizontal");

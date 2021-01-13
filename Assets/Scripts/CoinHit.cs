@@ -4,16 +4,11 @@ using UnityEngine;
 
 public class CoinHit : MonoBehaviour
 {
+    [HideInInspector]
     public AudioSource coinAudioSource;
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        coinAudioSource = GameObject.Find("AudioManager").transform.Find("CoinHit").gameObject.GetComponent<AudioSource>();
     }
 
     void OnCollisionEnter(Collision col) {

@@ -2,19 +2,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
+using UnityEngine.VFX.Utility;
 
 public class PlayerModes : MonoBehaviour
 {
     [SerializeField]
     private PlayerModeMaterial[] mats;
-    private Material curMaterial;
+    /*
+    [SerializeField]
+    private PlayerTexture[] playerTextures;
+    */
+    Material curMaterial;
     public Renderer rend;
     public float timeInCertainMode = 1f;
     private float timeLeft = 0f;
+    // public Vector3[] colors;
+    // VisualEffect visualEffect;
+    // VFXEventAttribute eventAttribute;
+    // private int x = 0;
+    // static readonly ExposedProperty glowColor = "GlowColor";
 
     void Start()
     {
         curMaterial = mats[0].material;
+        // eventAttribute = visualEffect.CreateVFXEventAttribute();
     }
 
 
@@ -31,7 +43,12 @@ public class PlayerModes : MonoBehaviour
 
     public void SetPlayerMode(string mode) {
         PlayerModeMaterial curMode = Array.Find(mats,m => m.name == mode);
+        // PlayerTexture texture = Array.Find(playerTextures, p => p.name == mode);
         curMaterial = curMode.material;        
+        // Debug.Log(texture.texture.name);
+        // material.SetTexture("Texture", texture.texture);
+        // eventAttribute.SetVector3(glowColor, colors[x]);
+
         timeLeft = timeInCertainMode;
     }
 }
@@ -41,3 +58,11 @@ class PlayerModeMaterial {
     public string name;
     public Material material;
 }
+
+/*
+[Serializable]
+class PlayerTexture {
+    public string name;
+    public Texture texture;
+}
+*/

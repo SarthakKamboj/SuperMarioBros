@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 919132148121247389}
   - component: {fileID: 919132148121247388}
   - component: {fileID: 919132148121247390}
+  - component: {fileID: 4114687734136388944}
   m_Layer: 0
   m_Name: ice_rock
   m_TagString: Untagged
@@ -125,3 +126,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mode: Ice
+--- !u!114 &4114687734136388944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8888897695359107323}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c98a1c7560f718f4b91b63c45a935a67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceMultiplier: 10

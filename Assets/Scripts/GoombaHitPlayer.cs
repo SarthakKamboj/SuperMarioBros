@@ -18,7 +18,7 @@ public class GoombaHitPlayer : MonoBehaviour
 
     void OnCollisionEnter(Collision col) {
         if (col.collider.tag == "Player") {
-            Debug.Log("hit player");
+            // Debug.Log("goomba hit player");
         }
     }
 }
