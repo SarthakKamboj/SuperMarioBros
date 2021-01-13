@@ -15,7 +15,7 @@ public class CoinThroughBrick : MonoBehaviour
         Destroy(gameObject, timeToDieAfter);
     }
 
-    void Update() {
+    void FixedUpdate() {
         Vector3 pos = transform.position;
         pos.y += speedMultipler;
         transform.position = pos;

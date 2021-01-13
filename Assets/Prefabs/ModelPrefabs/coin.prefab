@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c9347fcfdada05439fe5e53e529c7df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationsPerSecond: 1
+  rotationsPerSecond: 2
 --- !u!65 &1972107864
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDieAfter: 0.2
-  speedMultipler: 0.5
+  speedMultipler: 0.1
 --- !u!82 &447940521
 AudioSource:
   m_ObjectHideFlags: 0

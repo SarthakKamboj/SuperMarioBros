@@ -6,7 +6,6 @@ public class CoinSpin : MonoBehaviour
 {
     public float rotationsPerSecond = 1f;
     private float degPerSecond; 
-    // Start is called before the first frame update
     void Start()
     {
         degPerSecond = rotationsPerSecond * 360;
