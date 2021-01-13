@@ -7,13 +7,29 @@ public class PlayerMovement : MonoBehaviour
     public Camera mainCamera;
     public Vector3 jumpForce;
     public float maxSpeed;
+    public int maxJumps = 2;
+    public float groundCheckDist = 0.1f;
+    public LayerMask layerMask;
+    float yExtent;
+    int jumpsLeft;
 
-    // Update is called once per frame
+
+    void Start() {
+        yExtent = GetComponent<Collider>().bounds.extents.y;
+        jumpsLeft = maxJumps;
+    }
     void Update()
     {
         Move();
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space) && jumpsLeft > 0) {
             Jump();
+            jumpsLeft -= 1;
+        }
+    }
+
+    void OnCollisionEnter(Collision col) {
+        if (col.gameObject.tag == "Ground") {
+            jumpsLeft = maxJumps;
         }
     }
     
