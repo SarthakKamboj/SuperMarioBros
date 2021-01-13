@@ -2,14 +2,20 @@
 
 public class BrickMaxHitsByPlayer : MonoBehaviour
 {
-    public int maxHits = 3;
+    public int minHits = 1;
+    public int maxHits = 7;
+    int hits;
+
+    void Start() {
+        hits = Random.Range(minHits, maxHits);
+    }
 
     void OnCollisionEnter(Collision col) {
         if (col.collider.tag == "Player") {
-            maxHits -= 1;
+            hits -= 1;
         }
 
-        if (maxHits == 0) {
+        if (hits == 0) {
             Destroy(gameObject);
         }
     }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class QuestionBlockHit : MonoBehaviour
@@ -8,19 +9,24 @@ public class QuestionBlockHit : MonoBehaviour
 
     [SerializeField]
     private Material questionBlockHitMaterial;
-    [SerializeField]
-    private List<MonoBehaviour> compsToKeep;
+    private BlockHitByPlayer blockHitByPlayer;
+    void Start() {
+        blockHitByPlayer = GetComponent<BlockHitByPlayer>();
+    }
 
     void OnCollisionEnter(Collision col) {
-        if (col.collider.tag == "Player") {
+        StartCoroutine(HitValid());
+    }
+
+    IEnumerator HitValid() {
+        yield return new WaitForSeconds(Time.deltaTime);
+        if (blockHitByPlayer.numObjectsInstantiated != 0) {
             GetComponent<MeshFilter>().mesh = questionBlockHitMesh;
             GetComponent<MeshRenderer>().sharedMaterial = questionBlockHitMaterial;
 
             MonoBehaviour[] allComps = GetComponents<MonoBehaviour>();
             foreach(MonoBehaviour comp in allComps) {
-                // if (!compsToKeep.Contains(comp)) {
-                    comp.enabled = false;
-                // }
+                comp.enabled = false;
             }
         }
     }
