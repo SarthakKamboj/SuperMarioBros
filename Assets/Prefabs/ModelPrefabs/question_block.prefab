@@ -129,6 +129,7 @@ MonoBehaviour:
     componentToCall: {fileID: 0}
   - prefab: {fileID: 0}
     componentToCall: {fileID: 0}
+  numObjectsInstantiated: 0
 --- !u!114 &2134695016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,4 +146,3 @@ MonoBehaviour:
     type: 3}
   questionBlockHitMaterial: {fileID: 2100000, guid: 70468b9eb4816364da63180e76fa9b8c,
     type: 2}
-  compsToKeep: []

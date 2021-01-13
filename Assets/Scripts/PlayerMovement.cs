@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     void Start() {
         yExtent = GetComponent<Collider>().bounds.extents.y;
         jumpsLeft = maxJumps;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     void Update()
     {

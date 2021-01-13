@@ -127,6 +127,7 @@ MonoBehaviour:
   objects:
   - prefab: {fileID: 0}
     componentToCall: {fileID: 0}
+  numObjectsInstantiated: 0
 --- !u!114 &4965211411597619107
 MonoBehaviour:
   m_ObjectHideFlags: 0
