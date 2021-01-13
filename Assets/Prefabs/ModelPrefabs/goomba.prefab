@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7603974785051324422}
   - component: {fileID: 919132148375615323}
   - component: {fileID: 757119029}
+  - component: {fileID: 3387715378886611795}
   m_Layer: 0
   m_Name: goomba
   m_TagString: Untagged
@@ -125,3 +126,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitForce: {x: 0, y: 25, z: 0}
   dieForce: {x: 0, y: 10, z: 0}
+--- !u!114 &3387715378886611795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7298038211981028045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 962f595f2a0a038448b485f9cce72974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialDirection: {x: 0, y: 0, z: 1}
+  speed: 5

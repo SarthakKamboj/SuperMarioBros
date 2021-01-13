@@ -3,7 +3,6 @@
 public class PlayerDie : MonoBehaviour
 {
     public Vector3 upForce = new Vector3(0f,20f,0f);
-    public AudioSource hitPlayerAs;
     GameObject audioManager;
 
     void Start() {

@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 919132149621270834}
   - component: {fileID: 2134695015}
   - component: {fileID: 2134695016}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: question_block
-  m_TagString: Untagged
+  m_TagString: Question
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

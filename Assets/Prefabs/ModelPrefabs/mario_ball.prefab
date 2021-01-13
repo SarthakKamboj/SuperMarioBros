@@ -169,4 +169,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upForce: {x: 0, y: 20, z: 0}
-  hitPlayerAs: {fileID: 0}
