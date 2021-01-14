@@ -70,7 +70,7 @@ public class QuestionBrickGroup : MonoBehaviour
         GameObject tempBrick = Instantiate(brickPrefab);
         brickWidth = tempBrick.GetComponent<Collider>().bounds.size.z;
         Destroy(tempBrick);
-        return numQuestionBlocks * questionBlockWidth + (numBlocks - numQuestionBlocks) * brickWidth;
+        return (numQuestionBlocks * questionBlockWidth) + ((numBlocks - numQuestionBlocks) * brickWidth);
     }
 
     float GetStartZ(float width) {
@@ -90,13 +90,13 @@ public class QuestionBrickGroup : MonoBehaviour
         float curLeftZ = transform.position.z - (width/2);
         float curRightZ = transform.position.z + (width/2);
         
-        float leftBoundsZ = leftBoundary.transform.position.z + leftBounds.extents.z;
-        float rightBoundsZ = rightBoundary.transform.position.z - rightBounds.extents.z;
+        float leftBoundZ = leftBoundary.transform.position.z + leftBounds.extents.z;
+        float rightBoundZ = rightBoundary.transform.position.z - rightBounds.extents.z;
 
-        if (leftBoundsZ > curLeftZ) {
-            curLeftZ = leftBoundsZ;
-        } else if (rightBoundsZ < curRightZ) {
-            curLeftZ = rightBoundsZ - width - 2f;
+        if (curLeftZ < leftBoundZ ) {
+            curLeftZ = leftBoundZ;
+        } else if (curRightZ > rightBoundZ) {
+            curLeftZ = rightBoundZ - width;
         }
 
         return curLeftZ;
