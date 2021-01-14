@@ -35,6 +35,11 @@ public class SoundHandler : MonoBehaviour
         Destroy(newAudioSource,newAudioSource.clip.length);
     }
 
+    public AudioClip GetClip(string soundName) {
+        Sound sound = Array.Find<Sound>(sounds.ToArray(), s => s.name == soundName);
+        return sound.clip;
+    }
+
 
     AudioSource CreateAudioSource(Sound sound) {
         AudioSource source = gameObject.AddComponent<AudioSource>();
