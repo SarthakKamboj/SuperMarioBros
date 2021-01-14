@@ -11,7 +11,7 @@ public class PlayerDie : MonoBehaviour
     public void Die() {
         audioManager.GetComponent<SoundHandler>().Play("Player Die");
         StagnateMovement();
-        DisableAllComponents();
+        GetComponent<DisablePlayer>().DisableAllComponents();
         Destroy(gameObject, 5f);
     }
 
@@ -22,10 +22,4 @@ public class PlayerDie : MonoBehaviour
         rb.velocity = Vector3.up * rb.velocity.y;
     }
 
-    private void DisableAllComponents() {
-        MonoBehaviour[] comps = GetComponents<MonoBehaviour>();
-        foreach (MonoBehaviour comp in comps) {
-            comp.enabled = false;
-        }
-    }
 }
