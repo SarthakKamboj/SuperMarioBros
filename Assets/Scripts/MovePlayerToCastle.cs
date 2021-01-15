@@ -7,6 +7,8 @@ public class MovePlayerToCastle : MonoBehaviour
     public Transform castleFrontTransform;
     public Transform castleTransform;
     public GameObject playerPrefab;
+    public SceneHandler sceneHandler;
+    public float nextSceneLoadDelay = 2f;
     Vector3 castleFrontPos;
     Vector3 castlePos;
     GameObject player;
@@ -54,9 +56,14 @@ public class MovePlayerToCastle : MonoBehaviour
                 if (playerPos.x >= castlePos.x) {
                     movingPlayerToCastle = false;
                     Destroy(fakePlayer);
+                    Invoke("LoadNextScene", nextSceneLoadDelay);
                 }
         }
 
+    }
+
+    void LoadNextScene() {
+        sceneHandler.LoadNextScene();
     }
 
     void GenerateFakePlayer() {

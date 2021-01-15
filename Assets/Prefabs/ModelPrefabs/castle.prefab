@@ -158,3 +158,5 @@ MonoBehaviour:
   castleTransform: {fileID: 1717334215}
   playerPrefab: {fileID: 919132149155446097, guid: c91d90adf4b291441a5a742f75adc167,
     type: 3}
+  sceneHandler: {fileID: 0}
+  nextSceneLoadDelay: 0.25
