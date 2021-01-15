@@ -20,6 +20,7 @@ public class PlayerFinished : MonoBehaviour
             dp.StopAllMovement();
             GameObject.FindGameObjectWithTag("Flag").GetComponent<BringFlagDown>().FlagDown();
             cinemachineCamera.GetComponent<ZoomOutCamera>().ZoomOut(soundHandler.GetClip("Level Over").length);
+            GameObject.FindGameObjectWithTag("Castle").GetComponent<MovePlayerToCastle>().MovePlayer();
         }
     }
     

@@ -15,6 +15,5 @@ public class DisablePlayer : MonoBehaviour
             Rigidbody playerRb = GetComponent<Rigidbody>();
             playerRb.velocity = Vector3.zero;
             playerRb.angularVelocity = Vector3.zero;
-            playerRb.maxAngularVelocity = 0f;
     }
 }
