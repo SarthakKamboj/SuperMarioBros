@@ -696,6 +696,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2a03d2b267f07940bc3493c09765986, type: 3}
+--- !u!1 &639295285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 639295286}
+  m_Layer: 0
+  m_Name: FakePlayerTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &639295286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639295285}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -86.4, y: -147.6, z: 29.322128}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1342081362 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7597074856260082245, guid: 7f2dc8e665a5dce47afda011bb938787,
@@ -1655,12 +1685,12 @@ PrefabInstance:
     - target: {fileID: 7597074856669286689, guid: 7f2dc8e665a5dce47afda011bb938787,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70297885
+      value: 0.7029788
       objectReference: {fileID: 0}
     - target: {fileID: 7597074856669286689, guid: 7f2dc8e665a5dce47afda011bb938787,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7081123
+      value: 0.70811236
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f2dc8e665a5dce47afda011bb938787, type: 3}

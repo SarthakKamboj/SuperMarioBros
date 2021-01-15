@@ -19,8 +19,9 @@ public class PlayerFinished : MonoBehaviour
             dp.DisableAllComponents();
             dp.StopAllMovement();
             GameObject.FindGameObjectWithTag("Flag").GetComponent<BringFlagDown>().FlagDown();
-            cinemachineCamera.GetComponent<ZoomOutCamera>().ZoomOut(soundHandler.GetClip("Level Over").length);
-            GameObject.FindGameObjectWithTag("Castle").GetComponent<MovePlayerToCastle>().MovePlayer();
+            float timeTillEndAnimOver = soundHandler.GetClip("Level Over").length;
+            cinemachineCamera.GetComponent<ZoomOutCamera>().ZoomOut(timeTillEndAnimOver);
+            GameObject.FindGameObjectWithTag("Castle").GetComponent<MovePlayerToCastle>().MovePlayer(timeTillEndAnimOver);
         }
     }
     

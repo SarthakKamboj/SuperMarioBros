@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1717334214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1717334215}
+  m_Layer: 0
+  m_Name: CastleTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1717334215
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717334214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.06, y: -0.57, z: 0.52}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5597332654482960969}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4964950451830251632
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8939138074158609555}
   m_Layer: 0
-  m_Name: EndTransform
+  m_Name: CastleFrontTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4964950451830251632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.059, y: -0.57, z: 0.742}
+  m_LocalPosition: {x: -0.06, y: -0.57, z: 1.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5597332654482960969}
@@ -61,6 +91,7 @@ Transform:
   m_LocalScale: {x: 4.4042, y: 3.7276764, z: 4.4042}
   m_Children:
   - {fileID: 8939138074158609555}
+  - {fileID: 1717334215}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
@@ -123,5 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ebc06748b4af04e97ae1c8895c8634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endTransform: {fileID: 8939138074158609555}
-  movementMultipler: 100
+  castleFrontTransform: {fileID: 8939138074158609555}
+  castleTransform: {fileID: 1717334215}
+  playerPrefab: {fileID: 919132149155446097, guid: c91d90adf4b291441a5a742f75adc167,
+    type: 3}

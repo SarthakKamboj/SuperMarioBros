@@ -12,8 +12,8 @@ public class DisablePlayer : MonoBehaviour
     }
 
     public void StopAllMovement() {
-            Rigidbody playerRb = GetComponent<Rigidbody>();
-            playerRb.velocity = Vector3.zero;
-            playerRb.angularVelocity = Vector3.zero;
+        Rigidbody playerRb = GetComponent<Rigidbody>();
+        playerRb.velocity = Vector3.zero;
+        playerRb.angularVelocity = Vector3.zero;
     }
 }
