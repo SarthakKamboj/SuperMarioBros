@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7535243763882315284}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: CoinPiranhaPipeGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,6 +100,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: coin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6662440312340553641, guid: 3c44b3772396da948acc649f7d3fa6df,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c44b3772396da948acc649f7d3fa6df, type: 3}
 --- !u!4 &1566578167924303782 stripped
@@ -115,10 +120,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7535243763882315284}
     m_Modifications:
+    - target: {fileID: 1570802128, guid: e7f61afb1b8286942859d7c1c1798007, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 499081520678936306, guid: e7f61afb1b8286942859d7c1c1798007,
         type: 3}
       propertyPath: m_Name
       value: pipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 499081520678936306, guid: e7f61afb1b8286942859d7c1c1798007,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 616389921209851297, guid: e7f61afb1b8286942859d7c1c1798007,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 616389922936851496, guid: e7f61afb1b8286942859d7c1c1798007,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7190201701350773811, guid: e7f61afb1b8286942859d7c1c1798007,
         type: 3}
@@ -199,6 +223,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: piranha_plant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881603617683262162, guid: fc7456c18a59efe479ab4060cafea4e5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6544988068181020776, guid: fc7456c18a59efe479ab4060cafea4e5,
         type: 3}

@@ -138,5 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962f595f2a0a038448b485f9cce72974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialDirection: {x: 0, y: 0, z: 1}
+  initialDirection: {x: 0, y: 0, z: -1}
   speed: 5
+  collisionLayerMask:
+    serializedVersion: 2
+    m_Bits: 47159
