@@ -64,6 +64,5 @@ public class BlockHitByPlayer : MonoBehaviour
 [System.Serializable]
 class InstantiableObject {
     public GameObject prefab;
-    // public Component componentToCall;
     public string componentToCall;
 }
