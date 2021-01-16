@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upForce: {x: 0, y: 20, z: 0}
+  sceneHandler: {fileID: 0}
 --- !u!114 &7122977374609920102
 MonoBehaviour:
   m_ObjectHideFlags: 0
