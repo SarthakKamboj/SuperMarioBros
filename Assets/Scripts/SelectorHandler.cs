@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class SelectorHandler : MonoBehaviour
 {
     public Image selectorImg;
-    public RectTransform[] selectionLocations;
+    public MenuHandler menuHandler;
+    [SerializeField]
+    private Event[] selectionLocations;
     int selection = 0;
     void Start()
     {
@@ -22,11 +25,19 @@ public class SelectorHandler : MonoBehaviour
                 selection = selectionLocations.Length - 1;
             }
             UpdateSelection();
+        } else if (Input.GetKeyDown(KeyCode.Return)) {
+            menuHandler.RegisterEvent(selectionLocations[selection].eventName);
         }
     }
 
     void UpdateSelection() {
 
-        selectorImg.rectTransform.anchoredPosition3D = selectionLocations[selection].anchoredPosition3D;
+        selectorImg.rectTransform.anchoredPosition3D = selectionLocations[selection].rectTransform.anchoredPosition3D;
     }
+}
+
+[Serializable]
+class Event {
+    public string eventName;
+    public RectTransform rectTransform;
 }

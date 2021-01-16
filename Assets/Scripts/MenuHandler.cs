@@ -10,7 +10,7 @@ public class MenuHandler : MonoBehaviour
         switch (name) {
             case "One Player":
                 Debug.Log("one player");
-                // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 break;
             case "Quit":
                 Debug.Log("quit");
